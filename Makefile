@@ -16,13 +16,4 @@ md5.o: md5.cu main.h
 clean:
 	rm *.o  *.fat* *.cudafe* *.i* *.cubin *.ptx *.module*
 
-test1:
-	./main wordlist.txt db_10.txt crack_pass_db_10.txt > output1.dat
-
-test2:
-	./main wordlist.txt db_50.txt crack_pass_db_50.txt > output2.dat
-
-test3:
-	./main wordlist.txt db_100.txt crack_pass_db_100.txt > output3.dat
-
-.PHONY: clean test1 test2 test3
+.PHONY: clean
