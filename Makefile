@@ -5,7 +5,7 @@ CUDA_CFLAGS = -I$(INCLUDE_PATH) -keep #-DGPU_BENCHMARK -DDEBUG -DBENCHMARK
 CC = gcc
 CFLAGS = -I$(INCLUDE_PATH) -L$(LIB_PATH) -lcudart -lstdc++ #-DDEBUG -DBENCHMARK
 
-all: main md5.o clean test1 test2 test3
+all: main md5.o clean
 
 main: main.c main.h md5.o
 	$(CC) main.c md5.o -o main $(CFLAGS)
